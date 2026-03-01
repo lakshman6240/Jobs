@@ -23,3 +23,7 @@ This job notification system is designed to scrape job listings from popular job
   - Similar to the LinkedIn scraper, it accesses Naukri job listings and extracts relevant information.
   - Handles pagination to ensure all job listings are captured.
 
+- **Indeed Scraper**: 
+  - Similar to the LinkedIn scraper, it accesses Indeed job listings and extracts relevant information.
+  - Handles pagination to ensure all job listings are captured.
+
