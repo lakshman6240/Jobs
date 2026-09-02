@@ -27,7 +27,9 @@ jobs:
 
       - name: running scripts
         run: |
-          xvfb-run python parsers/naukri_final.py
+          xvfb-run python parsers/naukri_final.py & xvfb-run python parsers/naukri_final.py
 
       - name: files
-        run: ls -a
+        run: |
+          ls output/
+          cat output/naukri_jobs.jsonl
