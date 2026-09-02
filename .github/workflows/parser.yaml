@@ -1,1 +1,19 @@
-hi
+name: Simple Hello World Workflow
+
+# Trigger the workflow on any push event to the repository
+on: 
+  workflow_dispatch: 
+
+jobs:
+  say-hello:
+    # Use the latest Ubuntu virtual machine hosted by GitHub
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Download the repository code onto the runner
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step 2: Run a basic terminal command
+      - name: Run Greeting
+        run: echo "Hello, GitHub Actions is working perfectly!"
