@@ -20,6 +20,10 @@ jobs:
           python-version: '3.11'
 
       # Step 2: Run a basic terminal command
-      - name: Run Greeting
+      - name: installing requirements
         run: |
           pip install -r parsers/requirements.txt
+
+      - name: running scripts
+        run: |
+          python parsers/naukri_final.py
