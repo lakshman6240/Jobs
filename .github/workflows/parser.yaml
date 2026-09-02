@@ -22,4 +22,4 @@ jobs:
       # Step 2: Run a basic terminal command
       - name: Run Greeting
         run: |
-          pip install parsers/requirements.txt
+          pip install -r parsers/requirements.txt
