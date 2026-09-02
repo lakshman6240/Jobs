@@ -27,4 +27,4 @@ jobs:
 
       - name: running scripts
         run: |
-          python parsers/naukri_final.py
+          xvfb-run python parsers/naukri_final.py
