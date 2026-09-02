@@ -23,6 +23,7 @@ jobs:
       - name: installing requirements
         run: |
           pip install -r parsers/requirements.txt
+          playwright install
 
       - name: running scripts
         run: |
