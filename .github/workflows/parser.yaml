@@ -27,7 +27,9 @@ jobs:
 
       - name: running scripts
         run: |
-          xvfb-run python parsers/naukri_final.py & xvfb-run python parsers/indeed_final.py
+          xvfb-run --auto-servernum python parsers/naukri_final.py &
+          xvfb-run --auto-servernum python parsers/indeed_final.py &
+          wait
 
       - name: files
         run: |
