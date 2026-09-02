@@ -31,7 +31,10 @@ jobs:
           xvfb-run --auto-servernum python parsers/indeed_final.py &
           wait
 
-      - name: files
+      - name: Export files to Databricks Volume
+        env:
+          DATABRICKS_HOST: https://dbc-ecfaa4af-d4ab.cloud.databricks.com/
+          DATABRICKS_TOKEN: dapiacf94187439857ee1034df6d91c231c1
         run: |
-          ls output/
-          cat output/naukri_jobs.jsonl
+          # Replace 'catalog_name', 'schema_name', and 'volume_name' with your actual Unity Catalog path
+          databricks fs cp -r output/ dbfs:/Volumes/raw_catalogue/jobs/vol
