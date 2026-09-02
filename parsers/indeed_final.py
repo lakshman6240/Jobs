@@ -17,7 +17,7 @@ with open(OUTPUT_FILE, "w", encoding="utf-8"):
 for i in ["", "&start=10", "&start=20", "&start=30"]:
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch_persistent_context(user_data_dir="indeed_profile",headless=False)
 
         page = browser.new_page()
 
