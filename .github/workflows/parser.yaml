@@ -2,6 +2,9 @@ name: Simple Hello World Workflow
 
 # Trigger the workflow on any push event to the repository
 on: 
+  schedule:
+    # Runs at 9:00 AM and 12:00 PM IST every day
+    - cron: '30 3,6 * * *'
   workflow_dispatch: 
 
 jobs:
@@ -40,4 +43,5 @@ jobs:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
         run: |
           # Replace 'catalog_name', 'schema_name', and 'volume_name' with your actual Unity Catalog path
-          databricks fs cp -r output/ dbfs:/Volumes/raw_catalogue/jobs/vol/jobs_from_github/
+          databricks fs cp -r output/ dbfs:/Volumes/raw_catalogue/jobs/vol/jobs_from_github/ --overwrite
+          databricks jobs run-now --job-id "665484512273137"
