@@ -145,7 +145,6 @@ for i in ["", "&start=10", "&start=20", "&start=30"]:
                 # -------------------------
                 data = {
                     "source": "indeed",
-                    "job_id": job_key,
                     "title": title,
                     "company": company,
                     "location": location,

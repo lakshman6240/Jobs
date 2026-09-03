@@ -70,7 +70,7 @@ with sync_playwright() as p:
                         "span.locWdth[title]"
                     ).get_attribute("title")
                 except:
-                    location = ""
+                    location = "null"
 
                 job_link = job.locator(
                     "a.title"
