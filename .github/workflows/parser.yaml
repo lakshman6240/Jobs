@@ -44,4 +44,4 @@ jobs:
         run: |
           # Replace 'catalog_name', 'schema_name', and 'volume_name' with your actual Unity Catalog path
           databricks fs cp -r output/ dbfs:/Volumes/raw_catalogue/jobs/vol/jobs_from_github/ --overwrite
-          databricks jobs run-now "665484512273137"
+          databricks jobs run-now "665484512273137" --no-wait
