@@ -37,7 +37,7 @@ jobs:
       - name: Export files to Databricks Volume
         env:
           DATABRICKS_HOST: https://dbc-ecfaa4af-d4ab.cloud.databricks.com/
-          DATABRICKS_TOKEN: dapiacf94187439857ee1034df6d91c231c1
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
         run: |
           # Replace 'catalog_name', 'schema_name', and 'volume_name' with your actual Unity Catalog path
           databricks fs cp -r output/ dbfs:/Volumes/raw_catalogue/jobs/vol
