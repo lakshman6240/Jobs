@@ -2,6 +2,9 @@ name: Simple Hello World Workflow
 
 # Trigger the workflow on any push event to the repository
 on: 
+  schedule:
+    # Runs at 9:00 AM and 12:00 PM IST every day
+    - cron: '30 3,6 * * *'
   workflow_dispatch: 
 
 jobs:
@@ -14,6 +17,31 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
       # Step 2: Run a basic terminal command
-      - name: Run Greeting
-        run: echo "Hello, GitHub Actions is working perfectly!"
+      - name: installing requirements
+        run: |
+          pip install -r parsers/requirements.txt
+          playwright install
+
+      - name: running scripts
+        run: |
+          xvfb-run --auto-servernum python parsers/naukri_final.py &
+          xvfb-run --auto-servernum python parsers/indeed_final.py &
+          wait
+
+      - name: Setup Databricks CLI
+        uses: databricks/setup-cli@main
+
+      - name: Export files to Databricks Volume
+        env:
+          DATABRICKS_HOST: https://dbc-ecfaa4af-d4ab.cloud.databricks.com/
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: |
+          # Replace 'catalog_name', 'schema_name', and 'volume_name' with your actual Unity Catalog path
+          databricks fs cp -r output/ dbfs:/Volumes/raw_catalogue/jobs/vol/jobs_from_github/ --overwrite
+          databricks jobs run-now "665484512273137" --no-wait
