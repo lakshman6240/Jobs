@@ -1,10 +1,12 @@
-name: Simple Hello World Workflow
+name: Job Notification
 
 # Trigger the workflow on any push event to the repository
 on: 
   schedule:
     # Runs at 9:00 AM and 12:00 PM IST every day
-    - cron: '37 9,12 * * *'
+    - cron: '30 3 * * *'
+    - cron: '30 6 * * *'
+    - cron: '30 9 * * *'
   workflow_dispatch: 
 
 jobs:
