@@ -93,7 +93,7 @@ with sync_playwright() as p:
                         "title": title,
                         "company": company,
                         "location": location,
-                        "url": job_link,
+                        "url": job_link.split("?")[0],
                         "description": description
                 }
 
