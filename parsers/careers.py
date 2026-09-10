@@ -316,7 +316,6 @@ with sync_playwright() as p:
                                 f"Job error "
                                 f"[{job_index}]: {e}"
                             )
-                        break
 
                     # -------------------------------------
                     # Next page

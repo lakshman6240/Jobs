@@ -29,11 +29,6 @@ jobs:
         run: |
           xvfb-run --auto-servernum python parsers/naukri_final.py &
           wait
-
-      - name: running indeed
-        run: |
-          xvfb-run --auto-servernum python parsers/indeed_final.py &
-          wait
       
       - name: running careers
         run: |
