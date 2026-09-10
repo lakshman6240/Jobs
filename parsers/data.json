@@ -1,0 +1,58 @@
+[
+    {
+        "company": "IBM",
+        "url": "https://www.ibm.com/in-en/careers/search?field_keyword_08[0]=Data%20%26%20Analytics&field_keyword_05[0]=India",
+        "main_page": "div#ibm-hits-wrapper",
+        "jobs_list": "div.bx--card-group__cards__col",
+        "job_base_url": "",
+        "job_link": "a.bx--card-group__card",
+        "is_link_query": true,
+        "child_page": "h2.banner__text__title",
+        "title": "h2.banner__text__title",
+        "location": "span.card-item.card-item-location",
+        "description": "article.article--details",
+        "next_page": "a#IBMAccessibleItemComponents-next"
+    },
+    {
+        "company": "jpmorgan",
+        "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?keyword=data+engineer&location=India&locationId=300000000289360&locationLevel=country&mode=location",
+        "main_page": "div.job-tile",
+        "jobs_list": "div.job-tile",
+        "job_base_url": "",
+        "job_link": "a.job-grid-item__link",
+        "is_link_query": false,
+        "child_page": "h1.heading.job-details__title",
+        "title": "h1.heading.job-details__title",
+        "location": "div.job-details__subtitle.text-color-secondary",
+        "description": "div.job-details__description-content.basic-formatter",
+        "next_page": ""
+    },
+    {
+        "company": "kpmg",
+        "url": "https://ejgk.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_3001/jobs?keyword=data+engineer&location=India&locationId=300000000296042&locationLevel=country&mode=location",
+        "main_page": "div.search-results.job-tile.job-list-item",
+        "jobs_list": "div.search-results.job-tile.job-list-item",
+        "job_base_url": "",
+        "job_link": "a.job-list-item__link",
+        "is_link_query": false,
+        "child_page": "h1.heading.job-details__title",
+        "title": "h1.heading.job-details__title",
+        "location": "div.job-details__subtitle.text-color-secondary",
+        "description": "div.job-details__description-content.basic-formatter",
+        "next_page": ""
+    },
+    {
+        "company": "accordion",
+        "url": "https://www.accordion.com/careers/",
+        "main_page": "div#jobs-filter-list",
+        "jobs_list": "div.acor-mod-jobs-list.acor-inner a[href]",
+        "job_base_url": "https://www.accordion.com",
+        "job_link": "",
+        "is_link_query": true,
+        "child_page": "h1.acor-mod-hdr-stdrd-title.acor-large-text64",
+        "title": "h1.acor-mod-hdr-stdrd-title.acor-large-text64",
+        "location": "div.acor-tmmbr-main-location",
+        "description": "div.acor-tmmbr-main-text.acor-mod-text-box-text",
+        "next_page": ""
+    }
+]

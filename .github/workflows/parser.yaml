@@ -29,6 +29,7 @@ jobs:
         run: |
           xvfb-run --auto-servernum python parsers/naukri_final.py &
           xvfb-run --auto-servernum python parsers/indeed_final.py &
+          xvfb-run --auto-servernum python parsers/careers.py &
           wait
 
       - name: Setup Databricks CLI
