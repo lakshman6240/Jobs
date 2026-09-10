@@ -25,10 +25,14 @@ jobs:
           pip install -r parsers/requirements.txt
           playwright install
 
-      - name: running scripts
+      - name: running naukri
         run: |
           xvfb-run --auto-servernum python parsers/naukri_final.py &
-          xvfb-run --auto-servernum python parsers/indeed_final.py &
+          wait
+      
+      - name: running careers
+        run: |
+          xvfb-run --auto-servernum python parsers/careers.py &
           wait
 
       - name: Setup Databricks CLI
