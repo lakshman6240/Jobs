@@ -54,5 +54,33 @@
         "location": "div.acor-tmmbr-main-location",
         "description": "div.acor-tmmbr-main-text.acor-mod-text-box-text",
         "next_page": ""
+    },
+    {
+        "company": "epam",
+        "url": "https://careers.epam.com/en/jobs/india?search=data%20engineer&sort_by=relevance&utm_campaign=ta&utm_content=job-search&utm_medium=referral&utm_source=google.com&utm_term=start-your-search-here",
+        "main_page": "div.JobCard_panel__gTD7e",
+        "jobs_list": "div.JobCard_panel__gTD7e",
+        "job_base_url": "https://careers.epam.com",
+        "job_link": "a.JobCard_labelLink__cslqy",
+        "is_link_query": false,
+        "child_page": "h1.JobDetailsBanner_title___vzt6",
+        "title": "h1.JobDetailsBanner_title___vzt6",
+        "location": "div.UpperBar_list__h8X9X",
+        "description": "div.Description_categories__NnTtv",
+        "next_page": "button.PaginationArrow_paginationArrow__EEK_r[data-event-result='next']"
+    },
+    {
+        "company": "microsoft",
+        "url": "https://apply.careers.microsoft.com/careers?query=data+engineer&start=0&location=india&pid=1970393556947397&sort_by=relevance&filter_include_remote=1&filter_include_relocation=0",
+        "main_page": "div.cardListItem-3iAXI",
+        "jobs_list": "div.cardListItem-3iAXI",
+        "job_base_url": "https://apply.careers.microsoft.com",
+        "job_link": "a.r-link.card-F1ebU",
+        "is_link_query": false,
+        "child_page": "h2.position-title-3TPtN",
+        "title": "h2.position-title-3TPtN",
+        "location": "div.position-location-12ZUO",
+        "description": "div.container-3Gm1a",
+        "next_page": "button[aria-label='Next jobs']"
     }
 ]
