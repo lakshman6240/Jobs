@@ -208,5 +208,19 @@
         "location": "li.location-text",
         "description": "div.PD24",
         "next_page": ""
+    },
+    {
+        "company": "tigeranalytics",
+        "url": "https://www.tigeranalytics.com/about-us/current-openings/",
+        "main_page": "div#india div.jobs-wrap div.row.all-jobs-list-wrap",
+        "jobs_list": "div#india div.jobs-wrap div.row.all-jobs-list-wrap",
+        "job_base_url": "",
+        "job_link": "div.jobs-apply.bold a",
+        "is_link_query": false,
+        "child_page": "h2.align-titleJob",
+        "title": "h2.align-titleJob",
+        "location": "div.location-field p",
+        "description": "div.col-md-9.attribute-data",
+        "next_page": "div#career_in_pagination button.career_pagination_next.page"
     }
 ]
