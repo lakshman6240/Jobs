@@ -138,5 +138,19 @@
         "location": "dd.mb-3.text-base",
         "description": "div.wysiwyg.max-w-none.w-full",
         "next_page": ""
+    },
+    {
+        "company": "wells forge",
+        "url": "https://www.wellsfargojobs.com/en/jobs/?search=data+engineer&country=India",
+        "main_page": "div.card.card-job",
+        "jobs_list": "div.card.card-job",
+        "job_base_url": "https://www.wellsfargojobs.com",
+        "job_link": "a.stretched-link",
+        "is_link_query": false,
+        "child_page": "h1.hero-heading",
+        "title": "h1.hero-heading",
+        "location": "li.list-inline-item.nested-item",
+        "description": "article.cms-content",
+        "next_page": "a[aria-label='Go to next page of results']"
     }
 ]
