@@ -96,5 +96,19 @@
         "location": "div.h4",
         "description": "div.rich-text-blog.rich-text-body.b2.w-full",
         "next_page": ""
+    },
+    {
+        "company": "amazon",
+        "url": "https://www.amazon.jobs/en/search?offset=0&result_limit=10&sort=relevant&distanceType=Mi&radius=24km&industry_experience=four_to_six_years&latitude=&longitude=&loc_group_id=&loc_query=India&base_query=data%20engineer&city=&country=IND&region=&county=&query_options=&",
+        "main_page": "div.job-tile",
+        "jobs_list": "div.job-tile",
+        "job_base_url": "https://www.amazon.jobs",
+        "job_link": "h3.job-title a",
+        "is_link_query": false,
+        "child_page": "h1.title",
+        "title": "h1.title",
+        "location": "div.details-line",
+        "description": "div#job-detail-body",
+        "next_page": "button.btn.circle.right"
     }
 ]
