@@ -110,5 +110,19 @@
         "location": "div.details-line",
         "description": "div#job-detail-body",
         "next_page": "button.btn.circle.right"
+    },
+    {
+        "company": "google",
+        "url": "https://www.google.com/about/careers/applications/jobs/results?q=%22data%20engineer%22&location=India&target_level=MID&skills=databricks",
+        "main_page": "div.sMn82b",
+        "jobs_list": "div.sMn82b",
+        "job_base_url": "https://www.google.com/about/careers/applications",
+        "job_link": "a",
+        "is_link_query": false,
+        "child_page": "h2.p1N2lc",
+        "title": "h2.p1N2lc",
+        "location": "span.r0wTof",
+        "description": "div.KwJkGe, div.aG5W3, div.BDNOWe",
+        "next_page": ""
     }
 ]
