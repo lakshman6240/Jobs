@@ -180,5 +180,19 @@
         "location": "h2.job-location-heading",
         "description": "div.ats-description",
         "next_page": ""
+    },
+    {
+        "company": "qualcomm",
+        "url": "https://careers.qualcomm.com/careers?query=data+engineer&start=0&location=india&pid=446718405395&sort_by=relevance&filter_include_remote=0&filter_include_relocation=0",
+        "main_page": "div.cardListItem-3iAXI",
+        "jobs_list": "div.cardListItem-3iAXI",
+        "job_base_url": "https://careers.qualcomm.com/",
+        "job_link": "a.r-link.card-F1ebU",
+        "is_link_query": false,
+        "child_page": "h2.position-title-3TPtN",
+        "title": "h2.position-title-3TPtN",
+        "location": "div.position-location-12ZUO",
+        "description": "div.container-3Gm1a",
+        "next_page": "button[aria-label='Next jobs']"
     }
 ]
