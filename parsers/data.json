@@ -194,5 +194,19 @@
         "location": "div.position-location-12ZUO",
         "description": "div.container-3Gm1a",
         "next_page": "button[aria-label='Next jobs']"
+    },
+    {
+        "company": "ltimindtree",
+        "url": "https://ltimindtree.ripplehire.com/candidate/?token=xviyQvbnyYZdGtozXoNm&lang=en&source=CAREERSITE#list/search=data%20engineer&geo=India&location=Bangalore%2BBengaluru%2BChennai%20-%20Tamilnadu%2BChennai%2BHyderabad%2BIndia&exp=3",
+        "main_page": "div#joblist-panel",
+        "jobs_list": "div#joblist-panel li#row",
+        "job_base_url": "https://ltimindtree.ripplehire.com/candidate/?token=xviyQvbnyYZdGtozXoNm&lang=en&source=CAREERSITE",
+        "job_link": "a.job-title",
+        "is_link_query": false,
+        "child_page": "div.section-title",
+        "title": "div.section-title h2",
+        "location": "li.location-text",
+        "description": "div.PD24",
+        "next_page": ""
     }
 ]
