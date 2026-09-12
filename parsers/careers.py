@@ -32,6 +32,29 @@ def get_text(locator):
 
     return ""
 
+def scroll_to_bottom(page):
+    """Scroll the page gradually to the bottom."""
+    try:
+        previous_height = 0
+
+        while True:
+            current_height = page.evaluate(
+                "document.documentElement.scrollHeight"
+            )
+
+            if current_height == previous_height:
+                break
+
+            page.evaluate(
+                "window.scrollTo(0, document.documentElement.scrollHeight)"
+            )
+
+            page.wait_for_timeout(1000)
+
+            previous_height = current_height
+
+    except Exception as e:
+        print(f"Scroll error: {e}")
 
 def get_job_description(page, selector):
     try:
@@ -182,6 +205,9 @@ with sync_playwright() as p:
                     wait_until="domcontentloaded",
                     timeout=PAGE_TIMEOUT
                 )
+
+                if config['scroll']:
+                    scroll_to_bottom(listing_page)
 
                 # -----------------------------------------
                 # Pagination
