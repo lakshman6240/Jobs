@@ -166,5 +166,19 @@
         "location": "div.banner__text__subtitle",
         "description": "div.column.column--align-top.column--pad.column--extra-top-pad",
         "next_page": ""
+    },
+    {
+        "company": "mattel",
+        "url": "https://jobs.mattel.com/en/search-jobs/data%20engineer/India/2015/1/2/1269750/22/79/35/2",
+        "main_page": "div#search-results-list",
+        "jobs_list": "div#search-results-list li",
+        "job_base_url": "https://jobs.mattel.com",
+        "job_link": "a",
+        "is_link_query": false,
+        "child_page": "h1.job-title-heading",
+        "title": "h1.job-title-heading",
+        "location": "h2.job-location-heading",
+        "description": "div.ats-description",
+        "next_page": ""
     }
 ]
