@@ -202,7 +202,7 @@
         "jobs_list": "div#joblist-panel li#row",
         "job_base_url": "https://ltimindtree.ripplehire.com/candidate/?token=xviyQvbnyYZdGtozXoNm&lang=en&source=CAREERSITE",
         "job_link": "a.job-title",
-        "is_link_query": false,
+        "is_link_query": true,
         "child_page": "div.section-title",
         "title": "div.section-title h2",
         "location": "li.location-text",
