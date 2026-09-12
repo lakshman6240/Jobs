@@ -32,6 +32,29 @@ def get_text(locator):
 
     return ""
 
+def scroll_to_bottom(page):
+    """Scroll the page gradually to the bottom."""
+    try:
+        previous_height = 0
+
+        while True:
+            current_height = page.evaluate(
+                "document.documentElement.scrollHeight"
+            )
+
+            if current_height == previous_height:
+                break
+
+            page.evaluate(
+                "window.scrollTo(0, document.documentElement.scrollHeight)"
+            )
+
+            page.wait_for_timeout(1000)
+
+            previous_height = current_height
+
+    except Exception as e:
+        print(f"Scroll error: {e}")
 
 def get_job_description(page, selector):
     try:
@@ -80,24 +103,25 @@ def get_job_link(job, config):
         return None
 
 
-def scrape_job(browser_context, config, job_link):
+def scrape_job(browser_context, config, job_link, is_single_page, page):
     """Open and scrape an individual job."""
 
-    page = browser_context.new_page()
 
     try:
-        page.goto(
-            job_link,
-            wait_until="domcontentloaded",
-            timeout=PAGE_TIMEOUT
-        )
-
-        # Wait for job page
-        if config.get("child_page"):
-            page.wait_for_selector(
-                config["child_page"],
+        if not is_single_page:
+            page = browser_context.new_page()
+            page.goto(
+                job_link,
+                wait_until="domcontentloaded",
                 timeout=PAGE_TIMEOUT
             )
+
+            # Wait for job page
+            if config.get("child_page"):
+                page.wait_for_selector(
+                    config["child_page"],
+                    timeout=PAGE_TIMEOUT
+                )
 
         title = get_text(
             page.locator(config["title"])
@@ -126,7 +150,8 @@ def scrape_job(browser_context, config, job_link):
         print(f"Error scraping {job_link}: {e}")
 
     finally:
-        page.close()
+        if not is_single_page:
+            page.close()
 
     return {
         "title": "",
@@ -180,6 +205,9 @@ with sync_playwright() as p:
                     wait_until="domcontentloaded",
                     timeout=PAGE_TIMEOUT
                 )
+
+                if config['scroll']:
+                    scroll_to_bottom(listing_page)
 
                 # -----------------------------------------
                 # Pagination
@@ -235,52 +263,57 @@ with sync_playwright() as p:
                             if not job.is_visible():
                                 continue
 
-                            job_link = get_job_link(
-                                job,
-                                config
-                            )
-
-                            if not job_link:
-                                print(
-                                    f"Skipping job "
-                                    f"{job_index + 1}: "
-                                    f"No URL"
+                            if not config['is_single_page']:
+                                job_link = get_job_link(
+                                    job,
+                                    config
                                 )
-                                continue
 
-                            # ---------------------------------
-                            # Remove query parameters if required
-                            # ---------------------------------
-                            output_url = job_link
+                                if not job_link:
+                                    print(
+                                        f"Skipping job "
+                                        f"{job_index + 1}: "
+                                        f"No URL"
+                                    )
+                                    continue
 
-                            if not config["is_link_query"]:
-                                output_url = job_link.split("?")[0]
+                                # ---------------------------------
+                                # Remove query parameters if required
+                                # ---------------------------------
+                                output_url = job_link
 
-                            # ---------------------------------
-                            # Duplicate protection
-                            # ---------------------------------
-                            if output_url in processed_urls:
+                                if not config["is_link_query"]:
+                                    output_url = job_link.split("?")[0]
+
+                                # ---------------------------------
+                                # Duplicate protection
+                                # ---------------------------------
+                                if output_url in processed_urls:
+                                    print(
+                                        f"Duplicate skipped: "
+                                        f"{output_url}"
+                                    )
+                                    continue
+
+                                processed_urls.add(output_url)
+
                                 print(
-                                    f"Duplicate skipped: "
-                                    f"{output_url}"
+                                    f"[{job_index + 1}/"
+                                    f"{jobs_to_process}] "
+                                    f"Scraping: {job_link}"
                                 )
-                                continue
-
-                            processed_urls.add(output_url)
-
-                            print(
-                                f"[{job_index + 1}/"
-                                f"{jobs_to_process}] "
-                                f"Scraping: {job_link}"
-                            )
-
+                            else:
+                                job_link = config["url"]
+                                output_url = config["url"]
                             # ---------------------------------
                             # Scrape job detail
                             # ---------------------------------
                             job_data = scrape_job(
                                 context,
                                 config,
-                                job_link
+                                job_link,
+                                config['is_single_page'],
+                                job
                             )
 
                             result = {
@@ -316,6 +349,7 @@ with sync_playwright() as p:
                                 f"Job error "
                                 f"[{job_index}]: {e}"
                             )
+                        # break
 
                     # -------------------------------------
                     # Next page
