@@ -2,6 +2,7 @@
     {
         "company": "IBM",
         "url": "https://www.ibm.com/in-en/careers/search?field_keyword_08[0]=Data%20%26%20Analytics&field_keyword_05[0]=India",
+        "scroll": false,
         "main_page": "div#ibm-hits-wrapper",
         "jobs_list": "div.bx--card-group__cards__col",
         "is_single_page": false,
@@ -17,6 +18,7 @@
     {
         "company": "jpmorgan",
         "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?keyword=data+engineer&location=India&locationId=300000000289360&locationLevel=country&mode=location",
+        "scroll": false,
         "main_page": "div.job-tile",
         "jobs_list": "div.job-tile",
         "is_single_page": false,
@@ -32,6 +34,7 @@
     {
         "company": "kpmg",
         "url": "https://ejgk.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_3001/jobs?keyword=data+engineer&location=India&locationId=300000000296042&locationLevel=country&mode=location",
+        "scroll": false,
         "main_page": "div.search-results.job-tile.job-list-item",
         "jobs_list": "div.search-results.job-tile.job-list-item",
         "is_single_page": false,
@@ -47,6 +50,7 @@
     {
         "company": "accordion",
         "url": "https://www.accordion.com/careers/",
+        "scroll": false,
         "main_page": "div#jobs-filter-list",
         "jobs_list": "div.acor-mod-jobs-list.acor-inner a[href]",
         "is_single_page": false,
@@ -62,6 +66,7 @@
     {
         "company": "epam",
         "url": "https://careers.epam.com/en/jobs/india?search=data%20engineer&sort_by=relevance&utm_campaign=ta&utm_content=job-search&utm_medium=referral&utm_source=google.com&utm_term=start-your-search-here",
+        "scroll": false,
         "main_page": "div.JobCard_panel__gTD7e",
         "jobs_list": "div.JobCard_panel__gTD7e",
         "is_single_page": false,
@@ -77,6 +82,7 @@
     {
         "company": "microsoft",
         "url": "https://apply.careers.microsoft.com/careers?query=data+engineer&start=0&location=india&pid=1970393556947397&sort_by=relevance&filter_include_remote=1&filter_include_relocation=0",
+        "scroll": false,
         "main_page": "div.cardListItem-3iAXI",
         "jobs_list": "div.cardListItem-3iAXI",
         "is_single_page": false,
@@ -92,6 +98,7 @@
     {
         "company": "databricks",
         "url": "https://www.databricks.com/company/careers/open-positions?department=all&location=India",
+        "scroll": false,
         "main_page": "div#jobWrap",
         "jobs_list": "div.border-gray-lines.border a.text-navy-800",
         "is_single_page": false,
@@ -107,6 +114,7 @@
     {
         "company": "amazon",
         "url": "https://www.amazon.jobs/en/search?offset=0&result_limit=10&sort=relevant&distanceType=Mi&radius=24km&industry_experience=four_to_six_years&latitude=&longitude=&loc_group_id=&loc_query=India&base_query=data%20engineer&city=&country=IND&region=&county=&query_options=&",
+        "scroll": false,
         "main_page": "div.job-tile",
         "jobs_list": "div.job-tile",
         "is_single_page": false,
@@ -122,6 +130,7 @@
     {
         "company": "google",
         "url": "https://www.google.com/about/careers/applications/jobs/results?q=%22data%20engineer%22&location=India&target_level=MID&skills=databricks",
+        "scroll": false,
         "main_page": "div.sMn82b",
         "jobs_list": "div.sMn82b",
         "is_single_page": false,
@@ -137,6 +146,7 @@
     {
         "company": "uber",
         "url": "https://jobs.uber.com/en/jobs/?search=data+engineer&location=Hyderabad&lat=17.41&lng=78.48",
+        "scroll": false,
         "main_page": "div[data-slot='card']",
         "jobs_list": "div[data-slot='card']",
         "is_single_page": false,
@@ -152,6 +162,7 @@
     {
         "company": "wells forge",
         "url": "https://www.wellsfargojobs.com/en/jobs/?search=data+engineer&country=India",
+        "scroll": false,
         "main_page": "div.card.card-job",
         "jobs_list": "div.card.card-job",
         "is_single_page": false,
@@ -167,6 +178,7 @@
     {
         "company": "loreal",
         "url": "https://careers.loreal.com/en_US/jobs/SearchJobs/data%20engineer?9139=%5B18031%5D&9139_format=3710&listFilterMode=1",
+        "scroll": false,
         "main_page": "div.article__header__text",
         "jobs_list": "div.article__header__text",
         "is_single_page": false,
@@ -182,6 +194,7 @@
     {
         "company": "mattel",
         "url": "https://jobs.mattel.com/en/search-jobs/data%20engineer/India/2015/1/2/1269750/22/79/35/2",
+        "scroll": false,
         "main_page": "div#search-results-list",
         "jobs_list": "div#search-results-list li",
         "is_single_page": false,
@@ -197,6 +210,7 @@
     {
         "company": "qualcomm",
         "url": "https://careers.qualcomm.com/careers?query=data+engineer&start=0&location=india&pid=446718405395&sort_by=relevance&filter_include_remote=0&filter_include_relocation=0",
+        "scroll": false,
         "main_page": "div.cardListItem-3iAXI",
         "jobs_list": "div.cardListItem-3iAXI",
         "is_single_page": false,
@@ -212,6 +226,7 @@
     {
         "company": "ltimindtree",
         "url": "https://ltimindtree.ripplehire.com/candidate/?token=xviyQvbnyYZdGtozXoNm&lang=en&source=CAREERSITE#list/search=data%20engineer&geo=India&location=Bangalore%2BBengaluru%2BChennai%20-%20Tamilnadu%2BChennai%2BHyderabad%2BIndia&exp=3",
+        "scroll": false,
         "main_page": "div#joblist-panel",
         "jobs_list": "div#joblist-panel li#row",
         "is_single_page": false,
@@ -227,6 +242,7 @@
     {
         "company": "tigeranalytics",
         "url": "https://www.tigeranalytics.com/about-us/current-openings/",
+        "scroll": false,
         "main_page": "div#india div.jobs-wrap div.row.all-jobs-list-wrap",
         "jobs_list": "div#india div.jobs-wrap div.row.all-jobs-list-wrap",
         "is_single_page": false,
@@ -242,6 +258,7 @@
     {
         "company": "datamatics",
         "url": "https://www.datamatics.com/human-resources/job-openings",
+        "scroll": false,
         "main_page": "div.accordion-item",
         "jobs_list": "div.accordion-item",
         "is_single_page": true,
@@ -252,6 +269,22 @@
         "title": "div.accordion-title",
         "location": "",
         "description": "table.beta",
+        "next_page": ""
+    },
+    {
+        "company": "kanerika",
+        "url": "https://kanerika.com/careers/#open-job",
+        "scroll": true,
+        "main_page": "ul.rec-job-info",
+        "jobs_list": "ul.rec-job-info",
+        "is_single_page": false,
+        "job_base_url": "",
+        "job_link": "li.rec-job-title a",
+        "is_link_query": false,
+        "child_page": "h1.job_detil",
+        "title": "h1.job_detil",
+        "location": "div.cw-jobheader-info p",
+        "description": "div.cw-jobdescription.clearfix",
         "next_page": ""
     }
 ]
