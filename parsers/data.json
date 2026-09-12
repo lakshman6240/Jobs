@@ -152,5 +152,19 @@
         "location": "li.list-inline-item.nested-item",
         "description": "article.cms-content",
         "next_page": "a[aria-label='Go to next page of results']"
+    },
+    {
+        "company": "loreal",
+        "url": "https://careers.loreal.com/en_US/jobs/SearchJobs/data%20engineer?9139=%5B18031%5D&9139_format=3710&listFilterMode=1",
+        "main_page": "div.article__header__text",
+        "jobs_list": "div.article__header__text",
+        "job_base_url": "",
+        "job_link": "a",
+        "is_link_query": false,
+        "child_page": "h2.banner__text__title.serif",
+        "title": "h2.banner__text__title.serif",
+        "location": "div.banner__text__subtitle",
+        "description": "div.column.column--align-top.column--pad.column--extra-top-pad",
+        "next_page": ""
     }
 ]
