@@ -16,6 +16,22 @@
         "next_page": "a#IBMAccessibleItemComponents-next"
     },
     {
+        "company": "anblicks",
+        "url": "https://anblicks-talent.freshteam.com/jobs/search?utf8=%E2%9C%93&query=data+engineer&branch_id=3000033046&remote=0&commit=Go&accordion=on",
+        "scroll": false,
+        "main_page": "li.heading",
+        "jobs_list": "li.heading",
+        "is_single_page": false,
+        "job_base_url": "https://anblicks-talent.freshteam.com",
+        "job_link": "a.job-title.ab-ff-montserrat",
+        "is_link_query": false,
+        "child_page": "h1.brand-color.ab-ff-montserrat",
+        "title": "h1.brand-color.ab-ff-montserrat",
+        "location": "div.stick-hide-in-mobile.text-color",
+        "description": "div.job-details-content.content.ab-fs-16",
+        "next_page": ""
+    },
+    {
         "company": "jpmorgan",
         "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?keyword=data+engineer&location=India&locationId=300000000289360&locationLevel=country&mode=location",
         "scroll": false,
