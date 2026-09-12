@@ -82,5 +82,19 @@
         "location": "div.position-location-12ZUO",
         "description": "div.container-3Gm1a",
         "next_page": "button[aria-label='Next jobs']"
+    },
+    {
+        "company": "databricks",
+        "url": "https://www.databricks.com/company/careers/open-positions?department=all&location=India",
+        "main_page": "div#jobWrap",
+        "jobs_list": "div.border-gray-lines.border a.text-navy-800",
+        "job_base_url": "https://www.databricks.com/",
+        "job_link": "",
+        "is_link_query": false,
+        "child_page": "h1.text-navy-06",
+        "title": "h1.text-navy-06",
+        "location": "div.h4",
+        "description": "div.rich-text-blog.rich-text-body.b2.w-full",
+        "next_page": ""
     }
 ]
