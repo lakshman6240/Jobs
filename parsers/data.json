@@ -124,5 +124,19 @@
         "location": "span.r0wTof",
         "description": "div.KwJkGe, div.aG5W3, div.BDNOWe",
         "next_page": ""
+    },
+    {
+        "company": "uber",
+        "url": "https://jobs.uber.com/en/jobs/?search=data+engineer&location=Hyderabad&lat=17.41&lng=78.48",
+        "main_page": "div[data-slot='card']",
+        "jobs_list": "div[data-slot='card']",
+        "job_base_url": "https://jobs.uber.com",
+        "job_link": "a",
+        "is_link_query": false,
+        "child_page": "h1.mb-4.font-medium",
+        "title": "h1.mb-4.font-medium",
+        "location": "dd.mb-3.text-base",
+        "description": "div.wysiwyg.max-w-none.w-full",
+        "next_page": ""
     }
 ]
