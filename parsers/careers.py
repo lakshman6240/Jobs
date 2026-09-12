@@ -4,7 +4,7 @@ import os
 from urllib.parse import urljoin
 
 
-DATA_FILE = "data.json"
+DATA_FILE = "parsers/data.json"
 OUTPUT_DIR = "output"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "career_jobs.jsonl")
 
