@@ -26,7 +26,7 @@ def get_text(locator):
     """Safely get inner text."""
     try:
         if locator.count() > 0:
-            return locator.inner_text().strip()
+            return locator.first.inner_text().strip()
     except Exception:
         pass
 
