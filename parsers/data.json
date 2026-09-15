@@ -478,5 +478,53 @@
         "location": "p.css-1kiaia6",
         "description": "div.css-1nb1zny",
         "next_page": ""
+    },
+    {
+        "company": "ey",
+        "url": "https://careers.ey.com/search/?createNewAlert=false&q=data+engineer%2C+databricks&optionsFacetsDD_customfield1=&optionsFacetsDD_country=IN&optionsFacetsDD_city=Hyderabad",
+        "scroll": false,
+        "main_page": "tr.data-row",
+        "jobs_list": "tr.data-row",
+        "is_single_page": false,
+        "job_base_url": "https://careers.ey.com/",
+        "job_link": "a.jobTitle-link",
+        "is_link_query": false,
+        "child_page": "span[itemprop='title']",
+        "title": "span[itemprop='title']",
+        "location": "span[data-careersite-propertyid='city']",
+        "description": "div.joblayouttoken.rtltextaligneligible.displayDTM ",
+        "next_page": ""
+    },
+    {
+        "company": "sandvik",
+        "url": "https://www.home.sandvik/en/careers/job-search/?searchQuery=data+engineer%2C+databricks&type=India",
+        "scroll": false,
+        "main_page": "ul#filter-list li",
+        "jobs_list": "ul#filter-list li",
+        "is_single_page": false,
+        "job_base_url": "https://www.home.sandvik/",
+        "job_link": "a",
+        "is_link_query": false,
+        "child_page": "span[itemprop='name']",
+        "title": "span[itemprop='name']",
+        "location": "ul[data-id='job-location'] li",
+        "description": "div.prose.lg:col-span-7",
+        "next_page": ""
+    },
+    {
+        "company": "p&g",
+        "url": "https://www.pgcareers.com/in/en/search-results?keywords=data%20engineer%2C%20databricks&p=ChIJkbeSa_BfYzARphNChaFPjNc&location=India",
+        "scroll": false,
+        "main_page": "li.jobs-list-item.au-target.phw-card-block-nd",
+        "jobs_list": "li.jobs-list-item.au-target.phw-card-block-nd",
+        "is_single_page": false,
+        "job_base_url": "",
+        "job_link": "a[ph-tevent='job_click']",
+        "is_link_query": false,
+        "child_page": "h1.job-title.au-target",
+        "title": "h1.job-title.au-target",
+        "location": "span.au-target.job-location",
+        "description": "div.jd-info.au-target",
+        "next_page": ""
     }
 ]
