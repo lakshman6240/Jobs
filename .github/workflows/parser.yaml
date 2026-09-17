@@ -87,7 +87,6 @@ jobs:
           pip install -r parsers/requirements.txt
 
           playwright install
-          playwright install-deps
 
 
       # -------------------------------------------------------
@@ -107,14 +106,16 @@ jobs:
         run: |
           CHUNK_ID=${{ matrix.chunk }}
 
-          START=$((CHUNK_ID * 20))
-          END=$((START + 20))
+          START=$((CHUNK_ID * 10))
+          END=$((START + 10))
 
           echo "========================================"
           echo "Chunk ID : $CHUNK_ID"
           echo "Start   : $START"
           echo "End     : $END"
           echo "========================================"
+          xvfb-run --auto-servernum \
+            python parsers/careers.py "$START" "$END"
 
 
 
