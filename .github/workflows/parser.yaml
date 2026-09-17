@@ -5,44 +5,89 @@ on:
   workflow_dispatch: 
 
 jobs:
-  say-hello:
-    # Use the latest Ubuntu virtual machine hosted by GitHub
+
+  create-matrix:
     runs-on: ubuntu-latest
 
+    outputs:
+      chunks: ${{ steps.matrix.outputs.chunks }}
+
     steps:
-      # Step 1: Download the repository code onto the runner
+
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      # Step 2: Run a basic terminal command
-      - name: installing requirements
+      - name: Create Matrix
+        id: matrix
         run: |
-          pip install -r parsers/requirements.txt
-          playwright install
+          python - <<'PY'
+          import json
+          import math
 
-      - name: running naukri
-        run: |
-          xvfb-run --auto-servernum python parsers/naukri_final.py &
-          wait
+          CHUNK_SIZE = 20
+
+          with open("parsers/data.json", "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          total_documents = len(data)
+
+          number_of_chunks = math.ceil(total_documents / CHUNK_SIZE)
+
+          chunks = list(range(number_of_chunks))
+
+          print("========================================")
+          print(f"Total documents : {total_documents}")
+          print(f"Chunk size      : {CHUNK_SIZE}")
+          print(f"Number of jobs  : {number_of_chunks}")
+          print(f"Chunks          : {chunks}")
+          print("========================================")
+
+          with open("matrix.json", "w", encoding="utf-8") as f:
+              json.dump(chunks, f)
+
+          PY
+
+          echo "chunks=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
+
+
+  # say-hello:
+  #   # Use the latest Ubuntu virtual machine hosted by GitHub
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     # Step 1: Download the repository code onto the runner
+  #     - name: Checkout Code
+  #       uses: actions/checkout@v4
+
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v5
+  #       with:
+  #         python-version: '3.11'
+
+  #     # Step 2: Run a basic terminal command
+  #     - name: installing requirements
+  #       run: |
+  #         pip install -r parsers/requirements.txt
+  #         playwright install
+
+  #     - name: running naukri
+  #       run: |
+  #         xvfb-run --auto-servernum python parsers/naukri_final.py &
+  #         wait
       
-      - name: running careers
-        run: |
-          xvfb-run --auto-servernum python parsers/careers.py &
-          wait
+  #     - name: running careers
+  #       run: |
+  #         xvfb-run --auto-servernum python parsers/careers.py &
+  #         wait
 
-      - name: Setup Databricks CLI
-        uses: databricks/setup-cli@main
+  #     - name: Setup Databricks CLI
+  #       uses: databricks/setup-cli@main
 
-      - name: Export files to Databricks Volume
-        env:
-          DATABRICKS_HOST: https://dbc-ecfaa4af-d4ab.cloud.databricks.com/
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-        run: |
-          # Replace 'catalog_name', 'schema_name', and 'volume_name' with your actual Unity Catalog path
-          databricks fs cp -r output/ dbfs:/Volumes/raw_catalogue/jobs/vol/jobs_from_github/ --overwrite
-          databricks jobs run-now "665484512273137" --no-wait
+  #     - name: Export files to Databricks Volume
+  #       env:
+  #         DATABRICKS_HOST: https://dbc-ecfaa4af-d4ab.cloud.databricks.com/
+  #         DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+  #       run: |
+  #         # Replace 'catalog_name', 'schema_name', and 'volume_name' with your actual Unity Catalog path
+  #         databricks fs cp -r output/ dbfs:/Volumes/raw_catalogue/jobs/vol/jobs_from_github/ --overwrite
+  #         databricks jobs run-now "665484512273137" --no-wait
