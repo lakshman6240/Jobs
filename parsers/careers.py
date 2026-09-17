@@ -5,9 +5,10 @@ from urllib.parse import urljoin
 
 start = int(sys.argv[1])
 end = int(sys.argv[2])
+chuck_id = sys.argv[3]
 DATA_FILE = "parsers/data.json"
 OUTPUT_DIR = "output"
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "career_jobs.jsonl")
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "career_jobs" + chuck_id +".jsonl")
 
 MAX_PAGES = 3
 MAX_JOBS_PER_PAGE = 60
