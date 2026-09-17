@@ -24,7 +24,7 @@ jobs:
           import json
           import math
 
-          CHUNK_SIZE = 20
+          CHUNK_SIZE = 10
 
           with open("parsers/data.json", "r", encoding="utf-8") as f:
               data = json.load(f)
@@ -48,6 +48,74 @@ jobs:
           PY
 
           echo "chunks=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
+
+  careers:
+    needs: create-matrix
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        chunk: ${{ fromJSON(needs.create-matrix.outputs.chunks) }}
+
+    steps:
+
+      # -------------------------------------------------------
+      # Checkout repository
+      # -------------------------------------------------------
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+
+      # -------------------------------------------------------
+      # Setup Python
+      # -------------------------------------------------------
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+
+      # -------------------------------------------------------
+      # Install dependencies
+      # -------------------------------------------------------
+      - name: Installing requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r parsers/requirements.txt
+
+          playwright install
+          playwright install-deps
+
+
+      # -------------------------------------------------------
+      # Show current chunk
+      # -------------------------------------------------------
+      - name: Show Chunk Information
+        run: |
+          echo "========================================"
+          echo "Chunk ID: ${{ matrix.chunk }}"
+          echo "========================================"
+
+
+      # -------------------------------------------------------
+      # Run careers scraper
+      # -------------------------------------------------------
+      - name: Running Careers
+        run: |
+          CHUNK_ID=${{ matrix.chunk }}
+
+          START=$((CHUNK_ID * 20))
+          END=$((START + 20))
+
+          echo "========================================"
+          echo "Chunk ID : $CHUNK_ID"
+          echo "Start   : $START"
+          echo "End     : $END"
+          echo "========================================"
+
 
 
   # say-hello:
