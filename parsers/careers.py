@@ -1,12 +1,14 @@
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
-import json
+import json, sys
 import os
 from urllib.parse import urljoin
 
-
+start = int(sys.argv[1])
+end = int(sys.argv[2])
+chuck_id = sys.argv[3]
 DATA_FILE = "parsers/data.json"
 OUTPUT_DIR = "output"
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "career_jobs.jsonl")
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "career_jobs" + chuck_id +".jsonl")
 
 MAX_PAGES = 3
 MAX_JOBS_PER_PAGE = 60
@@ -17,8 +19,8 @@ PAGE_TIMEOUT = 30000
 # Load portal configuration
 # ---------------------------------------------------------
 with open(DATA_FILE, "r", encoding="utf-8") as file:
-    all_portals = json.load(file)
-
+    data = json.load(file)
+all_portals = data[start:end]
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
