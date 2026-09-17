@@ -168,7 +168,7 @@ jobs:
     # Use the latest Ubuntu virtual machine hosted by GitHub
     runs-on: ubuntu-latest
     needs: [careers, naukri]
-
+    steps:
       - name: Setup Databricks CLI
         uses: databricks/setup-cli@main
 
