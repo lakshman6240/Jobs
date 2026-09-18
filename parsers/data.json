@@ -526,5 +526,37 @@
         "location": "span.au-target.job-location",
         "description": "div.jd-info.au-target",
         "next_page": ""
+    },
+    {
+        "company": "definitivehc",
+        "url": "https://www.definitivehc.com/about/careers/india",
+        "scroll": false,
+        "main_page": "tr.job-post",
+        "jobs_list": "tr.job-post",
+        "is_single_page": false,
+        "job_base_url": "",
+        "job_link": "a",
+        "is_link_query": false,
+        "child_page": "h1.section-header.section-header--large.font-primary",
+        "title": "h1.section-header.section-header--large.font-primary",
+        "location": "div.job__location",
+        "description": "div.job__description.body",
+        "next_page": ""
+    },
+    {
+        "company": "itopendoors",
+        "url": "https://www.itopendoors.com/careers",
+        "scroll": false,
+        "main_page": "div.flex.flex-col.lg:flex-row.lg:items-center.lg:justify-between.gap-4",
+        "jobs_list": "div.flex.flex-col.lg:flex-row.lg:items-center.lg:justify-between.gap-4",
+        "is_single_page": true,
+        "job_base_url": "",
+        "job_link": "",
+        "is_link_query": false,
+        "child_page": "h3.text-xl.font-semibold.text-foreground",
+        "title": "h3.text-xl.font-semibold.text-foreground",
+        "location": "div.flex.items-center.gap-2",
+        "description": "ul.list-disc.list-inside.space-y-1.text-sm text-muted-foreground",
+        "next_page": ""
     }
 ]
