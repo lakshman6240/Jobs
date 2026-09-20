@@ -1,0 +1,50 @@
+[
+    {
+        "company": "AMD",
+        "url": "https://careers.amd.com/careers-home/jobs?keywords=Design%20Verification%20Engineer&sortBy=relevance&page=1&location=India&woe=12&regionCode=IN&stretchUnit=MILES&stretch=10",
+        "scroll": false,
+        "main_page": "p.job-title",
+        "jobs_list": "p.job-title",
+        "is_single_page": false,
+        "job_base_url": "https://careers.amd.com",
+        "job_link": "a.job-title-link",
+        "is_link_query": false,
+        "child_page": "h1[itemprop='title']",
+        "title": "h1[itemprop='title']",
+        "location": "li#header-locations",
+        "description": "article#description-body",
+        "next_page": "button[aria-label='Next Page of Job Search Results']"
+    },
+    {
+        "company": "synopsys",
+        "url": "https://careers.synopsys.com/search-jobs/design%20verification%20engineer/India/44408/1/2/1269750/22/79/50/2",
+        "scroll": false,
+        "main_page": "li.search-results-list__list-item",
+        "jobs_list": "li.search-results-list__list-item",
+        "is_single_page": false,
+        "job_base_url": "https://careers.synopsys.com",
+        "job_link": "a.sr-job-link",
+        "is_link_query": false,
+        "child_page": "div.jd-wrapper-1",
+        "title": "div.jd-wrapper-1 h1",
+        "location": "span.job-location",
+        "description": "div.ats-description",
+        "next_page": "a.next"
+    },
+    {
+        "company": "qualcomm",
+        "url": "https://careers.qualcomm.com/careers?query=design+verification+engineer&start=0&location=India&pid=446721051166&sort_by=relevance&filter_include_remote=0&filter_include_relocation=0",
+        "scroll": false,
+        "main_page": "div[data-test-id='job-listing']",
+        "jobs_list": "div[data-test-id='job-listing']",
+        "is_single_page": false,
+        "job_base_url": "https://careers.qualcomm.com",
+        "job_link": "a.r-link.card-F1ebU",
+        "is_link_query": false,
+        "child_page": "h2.position-title-3TPtN",
+        "title": "h2.position-title-3TPtN",
+        "location": "div.position-location-12ZUO",
+        "description": "div.container-3Gm1a",
+        "next_page": "button[aria-label='Next jobs']"
+    }
+]
