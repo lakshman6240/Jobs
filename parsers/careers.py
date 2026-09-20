@@ -68,15 +68,18 @@ def get_job_description(page, selector):
 def get_location(page, selector):
     """Extract all matching location elements."""
     try:
-        elements = page.locator(selector).all_inner_texts()
+        if selector:
+            elements = page.locator(selector).all_inner_texts()
 
-        locations = [
-            value.strip()
-            for value in elements
-            if value.strip()
-        ]
+            locations = [
+                value.strip()
+                for value in elements
+                if value.strip()
+            ]
 
-        return ", ".join(locations)
+            return ", ".join(locations)
+        else:
+            return "India"
 
     except Exception:
         return ""
