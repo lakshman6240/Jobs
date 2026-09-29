@@ -830,5 +830,21 @@
         "location": "li.location-text",
         "description": "div.PD24",
         "next_page": ""
+    },
+    {
+        "company": "cornerstone",
+        "url": "https://cornerstone.csod.com/ux/ats/careersite/2/home?c=cornerstone&sq=data%20engineer&country=in",
+        "scroll": false,
+        "main_page": "div.p-panel.p-bg-white.p-p-md.p-bw-xs.p-bc-grey70.p-bs-solid.rounded-all",
+        "jobs_list": "div.p-panel.p-bg-white.p-p-md.p-bw-xs.p-bc-grey70.p-bs-solid.rounded-all",
+        "is_single_page": false,
+        "job_base_url": "https://cornerstone.csod.com/",
+        "job_link": "a",
+        "is_link_query": false,
+        "child_page": "h1",
+        "title": "h1[data-tag='ReqTitle']",
+        "location": "span[data-tag='displayLocationMessage']",
+        "description": "div.p-view-jobdetailsad",
+        "next_page": ""
     }
 ]
