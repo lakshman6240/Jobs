@@ -121,7 +121,7 @@ with sync_playwright() as p:
             except Exception as e:
                 print(e)
         try:
-            page.get_by_role("link", name="Next ").click()
+            page.get_by_role("link", name="Next").click()
         except:
             break
 
