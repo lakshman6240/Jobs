@@ -120,7 +120,7 @@ with sync_playwright() as p:
                 # break
             except Exception as e:
                 print(e)
-        page.get_by_role("link", name="Next ").click()
+        page.get_by_role("link", name="Next").click()
 
     browser.close()
 
